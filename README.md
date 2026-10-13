@@ -11,16 +11,13 @@ All implementations use the straightforward triple-loop algorithm ($i-j-k$ loop 
 The experiments were conducted on a single machine with the following software configuration:
 | Component | Specification / Version | Configuration Details |
 | :--- | :--- | :--- |
-| **Operating System** | Windows 11 (64-bit) | Default power plan |
+| **Operating System** | Windows 11 (64-bit) | Procesador: AMD Ryzen 7 2700 Eight-core Processor, RAM: 32gb |
 | **Python** | Python 3.13.9 | Standards librarys + `matplotlib 3.10.x` | Pycharm enviroment |
 | **Java** | OpenJDK 25 | HotSpot JVM, 64-bit Server VM | IntelliJ enviroment |
 | **C Compiler** | GCC 15.2.0 | Standard `C11`, Release mode | CLion enviroment |
 ### Python Dependencies
 Python only requires `matplotlib` to produce the comparative charts:
-```bash
-pip install matplotlib
-Note: Python uses the standard library modules time, tracemalloc, and csv for benchmarking; no external numerical libraries (such as NumPy)
-```
+
 ## 3. Dataset Generation and Reproducibility
 
 ### Parameters
@@ -35,4 +32,9 @@ All languages only need run the main, and they generate a file "results_{languag
 ## 5.Example results
 
 <img width="873" height="268" alt="image" src="https://github.com/user-attachments/assets/75a536fc-af76-41cb-b52f-d08069e455ba" />
+
+<img width="1387" height="538" alt="image" src="https://github.com/user-attachments/assets/a32e16f4-d03f-4c13-b36f-bec3ad65221b" />
+
+<img width="1384" height="539" alt="image" src="https://github.com/user-attachments/assets/5c4a5ff9-e40d-426c-9b93-a66b3e29d2cb" />
+
 
