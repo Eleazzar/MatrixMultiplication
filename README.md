@@ -14,7 +14,7 @@ The experiments were conducted on a single machine with the following software c
 | **Operating System** | Windows 11 (64-bit) | Default power plan |
 | **Python** | Python 3.13.9 | Standards librarys + `matplotlib 3.10.x` | Pycharm enviroment |
 | **Java** | OpenJDK 25 | HotSpot JVM, 64-bit Server VM | IntelliJ enviroment |
-| **C Compiler** | GCC 15.2.0 | Standard `C11`, Release mode with `-O3` | Clion enviroment |
+| **C Compiler** | GCC 15.2.0 | Standard `C11`, Release mode | CLion enviroment |
 ### Python Dependencies
 Python only requires `matplotlib` to produce the comparative charts:
 ```bash
@@ -22,3 +22,17 @@ pip install matplotlib
 Note: Python uses the standard library modules time, tracemalloc, and csv for benchmarking; no external numerical libraries (such as NumPy)
 ```
 ## 3. Dataset Generation and Reproducibility
+
+### Parameters
+To ensure fair comparisons between programming languages, all key inputs are:
+Matrix dimensions: Square matrices with n [16,32,64,128,256,384]
+Deterministic Seed: The pseudo-random number generator is initialized with seed 42 in all three implementations.
+Random values: Uniformly distributed pseudo-random numbers between 0.0 and 10.0
+
+## 4.Build and Run instructions
+All languages only need run the main, and they generate a file "results_{languages}.csv". However, since Python handles the creation of graphs, it is essential to first run the Java and C mains.
+
+## 5.Example results
+
+<img width="873" height="268" alt="image" src="https://github.com/user-attachments/assets/75a536fc-af76-41cb-b52f-d08069e455ba" />
+
