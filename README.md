@@ -27,7 +27,8 @@ Deterministic Seed: The pseudo-random number generator is initialized with seed 
 Random values: Uniformly distributed pseudo-random numbers between 0.0 and 10.0
 
 ## 4.Build and Run instructions
-All languages only need run the main, and they generate a file "results_{languages}.csv". However, since Python handles the creation of graphs, it is essential to first run the Java and C mains.
+All languages only need run the main corresponding environment and they generate a file "results_{languages}.csv". However, since Python handles the creation of graphs, it is essential to first run the Java and C mains.
+Remember that must C are in the Release mode
 
 ## 5.Example results
 
