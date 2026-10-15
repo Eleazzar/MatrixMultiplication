@@ -39,4 +39,15 @@ Remember that must C are in the Release mode
 
 <img width="1384" height="539" alt="image" src="https://github.com/user-attachments/assets/5c4a5ff9-e40d-426c-9b93-a66b3e29d2cb" />
 
+## 6.Conclusions
+
+The straight, parallel trajectories observed in the log-log plots clearly demonstrate that the theoretical cost model is valid.
+
+Compilers and their underlying design philosophies are crucial factors when choosing a programming language; the native execution of C (compiled) and the bytecode of Java (compiled via JIT) significantly outperform Python (interpreted).
+
+Finally, the physical layout of data in memory plays a fundamental role in both memory consumption and access speed.
+
+While this study clearly establishes a performance baseline for elementary sequential implementations, several aspects remain open for future research:
+
+We limited our evaluation to the basic triple-loop (i-j-k) algorithm, without employing any optimizers or libraries available for these programming languages—for instance, NumPy in the case of Python.
 
