@@ -22,9 +22,7 @@ Python only requires `matplotlib` to produce the comparative charts:
 
 ### Parameters
 To ensure fair comparisons between programming languages, all key inputs are:
-Matrix dimensions: Square matrices with n [16,32,64,128,256,384]
-Deterministic Seed: The pseudo-random number generator is initialized with seed 42 in all three implementations.
-Random values: Uniformly distributed pseudo-random numbers between 0.0 and 10.0
+Square matrices with n [16,32,64,128,256,384] dimensions and a Deterministic Seed, the random number generator is initialized with seed 42 in all three implementations. This random values are Uniformly distributed pseudo-random numbers between 0.0 and 10.0
 
 ## 4.Build and Run instructions
 All languages only need run the main corresponding environment and they generate a file "results_{languages}.csv". However, since Python handles the creation of graphs, it is essential to first run the Java and C mains.
