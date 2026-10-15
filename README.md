@@ -1,13 +1,16 @@
 # Assignment 1: Basic Matrix Multiplication in Python, Java, and C
+
 **Course:** Big Data (Academic Year 2026-2027)  
 **Degree:** Data Science and Engineering (*Grado en Ciencia e Ingeniería de Datos*)  
 **Institution:** Universidad de Las Palmas de Gran Canaria (ULPGC)  
 
 ## 1. Project Overview
+
 This study investigates the performance and scalability of the basic dense matrix multiplication algorithm across three programming languages: **Python**, **Java**, and **C**. 
 All implementations use the straightforward triple-loop algorithm ($i-j-k$ loop order) with theoretical arithmetic complexity of $\mathcal{O}(n^3)$. The goal is to evaluate how matrix dimension ($n$) impacts execution runtime and peak memory consumption under controlled, reproducible conditions.
 
 ## 2. Experimental Environment and Dependencies
+
 The experiments were conducted on a single machine with the following software configuration:
 | Component | Specification / Version | Configuration Details |
 | :--- | :--- | :--- |
@@ -20,11 +23,11 @@ Python only requires `matplotlib` to produce the comparative charts:
 
 ## 3. Dataset Generation and Reproducibility
 
-### Parameters
 To ensure fair comparisons between programming languages, all key inputs are:
 Square matrices with n [16,32,64,128,256,384] dimensions and a Deterministic Seed, the random number generator is initialized with seed 42 in all three implementations. This random values are Uniformly distributed pseudo-random numbers between 0.0 and 10.0
 
 ## 4.Build and Run instructions
+
 All languages only need run the main corresponding environment and they generate a file "results_{languages}.csv". However, since Python handles the creation of graphs, it is essential to first run the Java and C mains. Python will look for the files needed to generate the tables in the default locations where the respective programming languages ​​typically store CSV files. It will also search within your own project to process these files and produce the results.
 Remember that must C are in the Release mode
 
