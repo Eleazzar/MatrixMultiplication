@@ -1,0 +1,21 @@
+﻿# IDEs
+.idea/
+*.iml
+.vscode/
+
+# Java
+target/
+*.class
+
+# C / CLion
+cmake-build-*/
+CMakeFiles/
+*.exe
+*.o
+*.obj
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
