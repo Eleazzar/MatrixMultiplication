@@ -35,8 +35,11 @@ To run the entire experiment, run the main assigment 2. When it finish, generate
 Note that assignment 2 uses methods from assignment 1, so do not download just the assignment 2 package, you must download the complete environment.
 
 ## 5.Example results
+<img width="912" height="259" alt="image" src="https://github.com/user-attachments/assets/9761f045-6fd2-4789-92e5-1775ad73d63d" />
 <img width="1214" height="476" alt="image" src="https://github.com/user-attachments/assets/dae86bac-f221-4c6d-b5d3-8d2b02515650" />
 <img width="1220" height="474" alt="image" src="https://github.com/user-attachments/assets/d0cac3f9-b07c-40d7-8926-dc185c0c7e09" />
+
+<img width="1110" height="241" alt="image" src="https://github.com/user-attachments/assets/17243727-bb1b-4250-b96b-d7c1771b4e98" />
 <img width="1220" height="475" alt="image" src="https://github.com/user-attachments/assets/a3882dad-15da-45c1-b69d-15260cee0621" />
 <img width="1215" height="469" alt="image" src="https://github.com/user-attachments/assets/1e87a3a5-6e0b-4d85-be16-3b6e37595251" />
 
