@@ -8,6 +8,7 @@
 
 This study investigates two key questions in matrix multiplication using Python: how loop and memory-access optimizations affect dense matrix multiplication and under which sparsity conditions a compressed sparse representation offers advantages in execution time and memory consumption.
 Starting from the validated basic implementation from Assignment 1, two sequential dense optimizations were implemented: Loop Reordering and Matrix Transposition.
+
 For sparse matrices, a custom Compressed Sparse Row (CSR) representation and multiplication algorithm were developed and evaluated across different percentages of zero entries.
 
 ## 2.Experimental Environment Depedencies
@@ -24,7 +25,7 @@ Remember that we don't use external libraries such as numpy and Python requires 
 
 To ensure fair and reproducible comparisons across all methods:
 The matrix from task 1 was used as the matrix base.
-Square dense matrices with n [16,32,64,128,256,384] dimensions.
+Square dense matrices with n = [16,32,64,128,256,384] dimensions.
 Square sparse matrices of fixed dimension n = 128 tested across sparsity levels [0%,25%,50%,75%,95%] of zeros.
 All use deterministic Seed, the random number generator is initialized with seed 42 just like assignment 1.
 
