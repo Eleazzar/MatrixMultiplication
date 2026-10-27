@@ -6,10 +6,6 @@ import time
 class CSRMatrix:
     """
     Custom Compressed Sparse Row (CSR) matrix representation for an n x n matrix.
-    Stores only nonzero entries using three flat 1D arrays:
-        - values:      List of nonzero floating-point values (length = nnz).
-        - col_indices: Column index for each nonzero value (length = nnz).
-        - row_ptr:     Start/end pointers in 'values' for each row (length = n + 1).
     """
 
     def __init__(self, values, col_indices, row_ptr, n):
@@ -34,12 +30,6 @@ class CSRMatrix:
 def dense_to_csr(M, n):
     """
     Converts an n x n dense 2D matrix M into Compressed Sparse Row (CSR) format.
-    Measured separately so conversion cost can be analysed independently from
-    the sparse multiplication kernel.
-
-    Returns:
-        conversion_time (float): Time spent converting dense -> CSR in seconds.
-        csr_matrix (CSRMatrix): The resulting CSR representation.
     """
     start = time.perf_counter()
 
@@ -65,18 +55,6 @@ def dense_to_csr(M, n):
 def multiply_sparse_csr(A_csr, B_csr, n):
     """
     [PART B - Sparse Matrix Multiplication using CSR Format]
-    Multiplies two n x n sparse matrices A_csr and B_csr represented in CSR format,
-    returning the product matrix C_csr also in CSR format.
-
-    Algorithm (Gustavson's Row-wise Sparse Multiplication):
-        For each row 'i' of A_csr, iterates ONLY over its nonzero entries A[i, k].
-        For each nonzero A[i, k], iterates ONLY over the nonzero entries B[k, j]
-        in row 'k' of B_csr, accumulating products into a temporary row buffer
-        and tracking touched column indices to build row 'i' of C_csr.
-
-    Returns:
-        elapsed_time (float): Sparse multiplication kernel execution time in seconds.
-        C_csr (CSRMatrix): The resulting product matrix in CSR format (with C_csr.nnz).
     """
     start = time.perf_counter()
 

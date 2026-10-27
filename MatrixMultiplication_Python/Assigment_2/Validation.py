@@ -52,7 +52,7 @@ def generate_test_matrix(n, sparsity=0.0):
 def multiply_csr_wrapper_for_a1(A, B, n):
     """
     Adapter so that Sparse CSR multiplication can also be tested directly
-    by Assignment 1's test_multiplication(n) suite (which expects dense 2D inputs/outputs).
+    by Assignment 1's test_multiplication(n)
     """
     _, A_csr = dense_to_csr(A, n)
     _, B_csr = dense_to_csr(B, n)
@@ -63,11 +63,6 @@ def multiply_csr_wrapper_for_a1(A, B, n):
 def test_multiplication(n=64):
     """
     Validation test suite for Assignment 2:
-    1. Reuses Assignment 1's test_multiplication() suite (TEST 1: Identity A*I=A,
-       TEST 2: Zero A*0=0, TEST 3: Random matrix) by injecting each new Assignment 2
-       method into Assigment_1.Validation without modifying Assignment 1's files.
-    2. Extends validation with floating-point tolerance checks (abs_tol=1e-9, rel_tol=1e-9)
-       and sparse fill-in verification against the Assignment 1 Baseline.
     """
     SEED = 42
     ABS_TOL = 1e-9
@@ -142,6 +137,3 @@ def test_multiplication(n=64):
     print(f"  * Max abs diff vs Baseline : {diff_sp80:.2e} | {'PASS' if ok_sp80 else 'FAIL'}")
     print("=" * 72 + "\n")
 
-
-if __name__ == "__main__":
-    test_multiplication()

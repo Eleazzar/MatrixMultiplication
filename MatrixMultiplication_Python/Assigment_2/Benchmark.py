@@ -17,8 +17,6 @@ from Assigment_2.CSR import (
 def generate_matrix(n, sparsity=0.0):
     """
     Generates an n x n square matrix with controlled sparsity.
-    - sparsity: fraction of zero entries in [0.0, 1.0].
-      (e.g., sparsity=0.90 -> 90% zeros, 10% density of nonzeros in [0.1, 10.0]).
     """
     matrix = []
     for _ in range(n):
@@ -33,7 +31,6 @@ def generate_matrix(n, sparsity=0.0):
 
 
 def compute_median_and_iqr(values):
-    """Computes the median and interquartile range (IQR) for 5 repetitions."""
     s = sorted(values)
     median = s[len(s) // 2]
     iqr = s[3] - s[1] if len(s) >= 5 else (s[-1] - s[0])
@@ -43,10 +40,6 @@ def compute_median_and_iqr(values):
 def run_benchmark_part_a(sizes=None, repetitions=5):
     """
     PART A: Dense Matrix Multiplication Optimisation Benchmark.
-    Compares 3 sequential dense methods on matched inputs across increasing n:
-      1. Baseline_ijk        (Standard naive triple loop)
-      2. Loop_Reordering_ikj (Row-major inner loop + hoisted A[i][k])
-      3. Transpose_B         (Pre-transposed B matrix + local scalar accumulator)
     """
     if sizes is None:
         sizes = [16, 32, 64, 128, 256, 384]
@@ -136,11 +129,6 @@ def run_benchmark_part_a(sizes=None, repetitions=5):
 def run_benchmark_part_b(n_fixed=128, sparsity_levels=None, repetitions=5):
     """
     PART B: Sparse Matrix Multiplication (CSR) vs Dense Methods across Sparsity Levels.
-    Tests multiple declared sparsity levels (% of zeros) and records:
-      - Sparsity (%) and Density (%)
-      - Input nonzeros (nnz_A, nnz_B) and output nonzeros (nnz_C -> fill-in)
-      - Conversion cost (Dense -> CSR) measured separately from the CSR kernel
-      - Peak memory for CSR storage + multiplication vs Dense storage + multiplication
     """
     if sparsity_levels is None:
         # Declared sparsity levels (percentage of zero entries): 0%, 50%, 80%, 90%, 95%, 99%

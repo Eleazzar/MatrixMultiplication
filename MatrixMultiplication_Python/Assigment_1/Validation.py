@@ -5,7 +5,6 @@ from Assigment_1.Matrix_multiplication import multiplication
 
 
 def format_matrix(matrix):
-    """Formats a matrix into a clean, human-readable string grid."""
     return '\n'.join('  [' + ' '.join(f'{val:6.2f}' for val in row) + ' ]' for row in matrix)
 
 
@@ -24,9 +23,7 @@ def test_multiplication(n=None):
     print("        VALIDATION SUITE: MATRIX MULTIPLICATION")
     print("=" * 65)
 
-    # -------------------------------------------------------------
     # TEST 1: Identity Matrix (A * I = A)
-    # -------------------------------------------------------------
     print("\n[TEST 1] Identity Matrix Property: A * I = A")
     print("Explanation: The identity matrix (I) is the neutral element in matrix")
     print("multiplication. Multiplying any matrix by I must return the original matrix.\n")
@@ -57,9 +54,8 @@ def test_multiplication(n=None):
     else:
         print("\n-> EVALUATION: ERROR (Result differs from matrix A).")
 
-    # -------------------------------------------------------------
     # TEST 2: Zero Matrix (A * 0 = 0)
-    # -------------------------------------------------------------
+
     print("\n" + "-" * 65)
     print("\n[TEST 2] Zero Matrix Property: A * 0 = 0")
     print("Explanation: Multiplying any matrix by a zero matrix (all entries 0.0)")
@@ -79,9 +75,7 @@ def test_multiplication(n=None):
     else:
         print("\n-> EVALUATION: ERROR (Found non-zero entries in result).")
 
-    # -------------------------------------------------------------
     # TEST 3: Random Matrix Multiplication
-    # -------------------------------------------------------------
     print("\n" + "-" * 65)
     print("\n[TEST 3] Random Matrix Multiplication")
 

@@ -72,9 +72,8 @@ def generate_plots():
     _, t_java, m_java = load_medians(csv_java)
     _, t_c, m_c = load_medians(csv_c)
 
-    # =========================================================================
-    # SUMMARY CONSOLE TABLE (Formatted in English)
-    # =========================================================================
+    # SUMMARY CONSOLE TABLE
+
     print("\n" + "=" * 105)
     print("                              PERFORMANCE COMPARISON SUMMARY (MEDIANS)")
     print("=" * 105)
@@ -84,9 +83,8 @@ def generate_plots():
         print(f"{n:<6} | {t_py[i]:<16.5f} | {t_java[i]:<15.5f} | {t_c[i]:<13.5f} | {m_py[i]:<16.3f} | {m_java[i]:<14.3f} | {m_c[i]:<11.3f}")
     print("=" * 105 + "\n")
 
-    # =========================================================================
     # 1. EXECUTION TIME PLOT (Linear vs Log-Log)
-    # =========================================================================
+
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5.5))
 
     # 1.1 Linear Scale
@@ -117,9 +115,8 @@ def generate_plots():
     print(f"[OK] Time comparison plot saved: {time_img_path}")
     plt.show()
 
-    # =========================================================================
     # 2. PEAK MEMORY PLOT (Linear vs Log-Log)
-    # =========================================================================
+
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5.5))
 
     # 2.1 Linear Scale
