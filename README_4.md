@@ -16,7 +16,7 @@ The experiments were conducted on the same machine as Assignments 1, 2, and 3 wi
 | **Java (Comparison)** | OpenJDK 21 | HotSpot JVM, 64-bit Server VM | IntelliJ environment |
 
 ### Python Dependencies
-Remember that we do not use external linear algebra libraries (such as NumPy) for the multiplication kernel. Python requires `dask[distributed]` to manage the local multi-process cluster and `matplotlib` to process the CSV data and produce the comparative charts.
+Remember that we do not use external linear algebra libraries (such as NumPy) for the multiplication kernel. Python requires **dask[distributed]** to manage the local multi-process cluster and **matplotlib** to process the CSV data and produce the comparative charts.
 
 ## 3. Dataset Generation and Reproducibility
 To ensure fair and reproducible comparisons between the sequential baseline and all distributed worker configurations:
@@ -28,8 +28,8 @@ To ensure fair and reproducible comparisons between the sequential baseline and 
 ## 4. Build and Run Instructions
 To run the entire experiment:
 1. In **Python (PyCharm)**, install the distributed dependency if not already installed: `pip install "dask[distributed]" matplotlib`.
-2. Run `main.py` inside the `Assigment_4` package. When it finishes, it will execute the two-stage validation suite, run the benchmark generating `results_assignment_4.csv`, print the summary table in the terminal, and generate the comparative graphs (including the cross-paradigm comparison against `results_assignment_3.csv`).
-Note that `Assigment_4` reuses methods directly from `Assigment_1` in Python and reads `results_assignment_3.csv`, so do not download just the `Assigment_4` package; you must download the complete environment.
+2. Run main.py inside the Assigment_4 package. When it finishes, it will execute the two-stage validation suite, run the benchmark generating **results_assignment_4.csv**, print the summary table in the terminal, and generate the comparative graphs.
+Remember that Assigment_4 reuses methods directly from Assigment_1 in Python and reads results_assignment_3.csv, so do not download just the Assigment_4 package; you must download the complete environment.
 
 ## 5. Example results
 
