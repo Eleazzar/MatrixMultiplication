@@ -22,8 +22,8 @@ Remember that we do not use external linear algebra libraries (such as NumPy) fo
 To ensure fair and reproducible comparisons between the sequential baseline and all distributed worker configurations:
 - The matrix multiplication and validation methods from Assignment 1 in Python were used as the base.
 - Square dense matrices with $n = [16, 32, 64, 128, 256, 384]$ dimensions.
-- Worker configurations evaluated for every matrix dimension under strong scaling: $w = [1, 2, 4, 8]$ independent worker processes (`LocalCluster(processes=True, threads_per_worker=1)`).
-- All configurations use a deterministic seed: the random number generator is initialized with seed `42` just like Assignments 1, 2, and 3.
+- Worker configurations evaluated for every matrix dimension under strong scaling: $w = [1, 2, 4, 8]$ independent worker processes.
+- All configurations use a deterministic seed: the random number generator is initialized with seed 42 just like Assignments 1, 2, and 3.
 
 ## 4. Build and Run Instructions
 To run the entire experiment:
